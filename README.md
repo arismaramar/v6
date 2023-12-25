@@ -4,6 +4,14 @@
 ### UPDATE
 <pre><code>wget -O update.sh https://raw.githubusercontent.com/arismaramar/v6/main/options/update.sh && chmod +x update.sh && ./update.sh</code></pre>
 
+# UNTUK PREMISSION (IZIN IP VPS) BISA LANGSUNG CHAT KE NOMER INI [LIST HARGA NYA] 
+👇👇
+
+
+# HUB NEGO : https://t.me/amantubilah
+
+# WA: https://wa.me/6285365581599
+
 ## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443 DETAILS ⏪
 ### Support Vmess Multipath <br> 
 [ SSH & XRAY SERVICES ] <br>
