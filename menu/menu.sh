@@ -178,7 +178,7 @@ let ssa=$ssx/2
 ########################
 clear
 echo -e " ${z}           ┌───────────────────────────────┐$NC"
-echo -e " ${z}           │  ${NC}${g} .::.${NC} YogzTunneling ${g} .::. $NC"
+echo -e " ${z}           │  ${NC}${g} .::.${NC} 085365581599 ${g} .::. $NC"
 echo -e " ${z}           └───────────────────────────────┘$NC"
 echo -e "${z} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e " ${z}│$NC  $y System OS ${NC}        $Blue:$NC  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
@@ -215,7 +215,7 @@ echo -e "    $r 3.$NC $purple MENU VLESS$NC              $r 8.$NC $purple INFO P
 echo -e "    $r 4.$NC $purple MENU TROJAN$NC             $r 9.$NC $purple INFO SERVER$NC" 
 echo -e "    $r 5.$NC $purple SHADOWSOCKS$NC             $r x.$NC $purple EXIT SCRIPT$NC"     
 echo -e " ${z}└─────────────────────────────────────────────────────┘"
-echo -e "                   Version : 1.4.0 ${NC}" | lolcat
+echo -e "                   Version : 1.4.2 ${NC}" | lolcat
 echo -e "                   _______________${NC}" | lolcat
 echo
 read -p " Select menu : " opt
