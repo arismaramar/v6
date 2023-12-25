@@ -48,12 +48,12 @@
 # HUB NEGO : https://t.me/amantubilah
 
 # WA: https://wa.me/6285365581599
-## ⏩ AUTOSCRIPT SIMPLE JOS GANDOS paling ringan di cpu ⏪
 ## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443/80 DETAILS ⏪
 ### Vmess Support  Semua bug/All/Dynamic/Multipath <br> 
 ### Limit Quota user xray <br> 
 ### Limit login per perangkat user xray <br> 
-### uuid xray random jadi paling aman dari pengintain sesama user <br> 
+### user uuid xray random/acak jadi paling aman dari pengintain sesama user dan atau sesama pengguna scrip<br> 
+### port xray uuid random/acak jadi paling aman dari pengintain sesama user dan atau sesama pengguna scrip<br> 
 
 [ SSH & XRAY SERVICES ] <br>
 <br>
