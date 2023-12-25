@@ -233,9 +233,10 @@ mkdir -p /usr/local/etc/xray
 
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 DOMAIN=anggunre.shop
 SUB_DOMAIN=${sub}.anggunre.shop
-NS_DOMAIN=ns.${sub}.anggunre.shop
+NS_DOMAIN=${subsl}.anggunre.shop
 CF_ID=arismar.amar@gmail.com
 CF_KEY=88ecae78b53455a919ccecd22bdbd0332f7c7
 set -euo pipefail
