@@ -48,11 +48,12 @@
 # HUB NEGO : https://t.me/amantubilah
 
 # WA: https://wa.me/6285365581599
-
-## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443 DETAILS ⏪
-### Support Vmess all/dynamic/Multipath <br> 
+## ⏩ AUTOSCRIPT SIMPLE JOS GANDOS paling ringan di cpu ⏪
+## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443/80 DETAILS ⏪
+### Vmess Support  Semua bug/All/Dynamic/Multipath <br> 
 ### Limit Quota user xray <br> 
 ### Limit login per perangkat user xray <br> 
+### uuid random jadi paling aman dari pengintain sesama user <br> 
 
 [ SSH & XRAY SERVICES ] <br>
 <br>
