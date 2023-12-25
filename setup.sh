@@ -151,7 +151,7 @@ if [[ -r /etc/xray/domain ]]; then
 clear
 echo -e "${INFO} Having Script Detected !"
 echo -e "${INFO} If You Replacing Script, All Client Data On This VPS Will Be Cleanup !"
-read -p "Are You Sure Wanna Replace Script ? (Y/N) " josdong
+read -p "Are You Sure Wanna Replace Script ? (Y/N) " lanjutka tekan enter
 if [[ $josdong == "Y" ]]; then
 clear
 echo -e "${INFO} Starting Replacing Script !"
@@ -420,7 +420,7 @@ fi
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m           >>> Install Source <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/arismaramar/v6/main/tools/arzsource.sh && chmod +x arzsource.sh && ./arzsource.sh
+wget -q https://raw.githubusercontent.com/arismaramar/v6/main/tools/anggunsource.sh && chmod +x anggunsource.sh && ./anggunsource.sh
 #install ssh-vpn
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m          >>> Install SSH WS <<<        \E[0m$NC"
