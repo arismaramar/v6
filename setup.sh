@@ -232,7 +232,7 @@ mkdir -p /etc/xray
 mkdir -p /usr/local/etc/xray
 
 # // String / Request Data
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 DOMAIN=anggunre.shop
 SUB_DOMAIN=${sub}.anggunre.shop
 NS_DOMAIN=ns.${sub}.anggunre.shop
