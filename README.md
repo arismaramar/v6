@@ -50,7 +50,10 @@
 # WA: https://wa.me/6285365581599
 
 ## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443 DETAILS ⏪
-### Support Vmess Multipath <br> 
+### Support Vmess all/dynamic/Multipath <br> 
+### Limit Quota user xray <br> 
+### Limit login per perangkat user xray <br> 
+
 [ SSH & XRAY SERVICES ] <br>
 <br>
 ✅ OpenSSH : 22 <br>
