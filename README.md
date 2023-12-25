@@ -53,7 +53,7 @@
 ### Vmess Support  Semua bug/All/Dynamic/Multipath <br> 
 ### Limit Quota user xray <br> 
 ### Limit login per perangkat user xray <br> 
-### uuid random jadi paling aman dari pengintain sesama user <br> 
+### uuid xray random jadi paling aman dari pengintain sesama user <br> 
 
 [ SSH & XRAY SERVICES ] <br>
 <br>
