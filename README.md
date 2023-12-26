@@ -1,8 +1,3 @@
-  
-## ⚠️ System Requirements ⚠️
-       Minimum 1GB RAM
-
-## ♦️Update & Upgrade First Your VPS for Debian 10 & 11♦️
 
   ```html
   apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
