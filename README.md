@@ -54,6 +54,8 @@
 ### Limit login per perangkat user xray <br> 
 ### user uuid xray random/acak jadi paling aman dari pengintain sesama user dan atau sesama pengguna scrip<br> 
 ### port xray uuid random/acak jadi paling aman dari pengintain sesama user dan atau sesama pengguna scrip<br> 
+### cange/manual uuid sehingga sangat mudah jika ingin pindah vps seketika ajatee<br> 
+### kunci uuid sehingga tidk akan logout/keluar dari puty/juicessh ketika create xray yg sedangkita gunakan vmess nya tee<br> 
 
 [ SSH & XRAY SERVICES ] <br>
 <br>
