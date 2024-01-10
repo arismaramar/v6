@@ -92,7 +92,7 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-
+source /var/lib/scrz-prem/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -267,6 +267,82 @@ vmesslink4="vmess://$(echo $aso | base64 -w 0)"
 vmesslink5="vmess://$(echo $grpc | base64 -w 0)"
 vmesslink6="vmess://$(echo $ama | base64 -w 0)"
 vmesslink7="vmess://$(echo $ami | base64 -w 0)"
+
+cat >/var/www/html/vmess-$user.txt <<-END
+
+◇━━━━━━━━━━━━━━━━━◇
+   ANGGUN For Clash
+◇━━━━━━━━━━━━━━━━━◇
+
+# Format Vmess WS TLS
+
+- name: Vmess-$user-WS TLS
+  type: vmess
+  server: ${domain}
+  port: 443
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+
+# Format Vmess WS Non TLS
+
+- name: Vmess-$user-WS Non TLS
+  type: vmess
+  server: ${domain}
+  port: 80
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+
+# Format Vmess gRPC
+
+- name: Vmess-$user-gRPC (SNI)
+  server: ${domain}
+  port: 443
+  type: vmess
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  servername: ${domain}
+  skip-cert-verify: true
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+◇━━━━━━━━━━━━━━━━━◇
+ Link Akun Vmess                   
+◇━━━━━━━━━━━━━━━━━◇
+Link TLS         : 
+${vmesslink1}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS    : 
+${vmesslink2}
+◇━━━━━━━━━━━━━━━━━◇
+Link GRPC        : 
+${vmesslink3}
+◇━━━━━━━━━━━━━━━━━◇
+
+END
+
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
@@ -283,7 +359,7 @@ echo -e "Port non tls : 80"
 echo -e "Key          : $uuid"
 echo -e "Network      : ws, grpc"
 echo -e "Path         : /vmess"
-echo -e "Dynamic        : https://bugmu.com/path"            
+echo -e "Dynamic      : https://bugmu.com/path"           
 echo -e "serviceName  : vmess-grpc"               
 echo -e ""  
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"              
