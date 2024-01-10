@@ -92,7 +92,7 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-source /var/lib/scrz-prem/ipvps.conf
+
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -283,7 +283,7 @@ echo -e "Port non tls : 80"
 echo -e "Key          : $uuid"
 echo -e "Network      : ws, grpc"
 echo -e "Path         : /vmess"
-echo -e "Path 0P0K    : /kuota-habis, /worryfree"                    
+echo -e "Dynamic        : https://bugmu.com/path"            
 echo -e "serviceName  : vmess-grpc"               
 echo -e ""  
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"              
