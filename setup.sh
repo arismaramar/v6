@@ -222,6 +222,7 @@ rm -fr /usr/local/bin/stunnel5
 rm -fr /etc/nginx
 rm -fr /var/lib/scrz-prem/
 rm -fr /usr/bin/xray
+rm -fr /var/www/html
 rm -fr /etc/xray
 rm -fr /usr/local/etc/xray
 # // Making Directory 
@@ -230,6 +231,7 @@ mkdir -p /var/lib/scrz-prem/
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 mkdir -p /usr/local/etc/xray
+mkdir -p /var/www/html
 
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
