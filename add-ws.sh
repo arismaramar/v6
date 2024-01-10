@@ -193,21 +193,6 @@ asi=`cat<<EOF
       "tls": "none"
 }
 EOF`
-aso=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "80",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/kuota-habis",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "none"
-}
-EOF`
 grpc=`cat<<EOF
       {
       "v": "2",
@@ -222,56 +207,23 @@ grpc=`cat<<EOF
       "host": "${domain}",
       "tls": "tls"
 }
-EOF`
-ama=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/worryfree",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "tls"
-}
-EOF`
-ami=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/kuota-habis",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "tls"
-}
-EOF`
+
+
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
 vmess_base644=$( base64 -w 0 <<< $vmess_json4)
-vmess_base645=$( base64 -w 0 <<< $vmess_json5)
-vmess_base646=$( base64 -w 0 <<< $vmess_json6)
-vmess_base647=$( base64 -w 0 <<< $vmess_json7)
+
 vmesslink1="vmess://$(echo $asu | base64 -w 0)"
 vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $asi | base64 -w 0)"
 vmesslink4="vmess://$(echo $aso | base64 -w 0)"
-vmesslink5="vmess://$(echo $grpc | base64 -w 0)"
-vmesslink6="vmess://$(echo $ama | base64 -w 0)"
-vmesslink7="vmess://$(echo $ami | base64 -w 0)"
+
 
 cat >/var/www/html/vmess-$user.txt <<-END
 
 ◇━━━━━━━━━━━━━━━━━◇
-   ANGGUN For Clash
+   Format For Clash
 ◇━━━━━━━━━━━━━━━━━◇
 
 # Format Vmess WS TLS
@@ -291,7 +243,7 @@ cat >/var/www/html/vmess-$user.txt <<-END
   ws-opts:
     path: /vmess
     headers:
-      Host: ${domain}
+    Host: ${domain}
 
 # Format Vmess WS Non TLS
 
@@ -310,7 +262,7 @@ cat >/var/www/html/vmess-$user.txt <<-END
   ws-opts:
     path: /vmess
     headers:
-      Host: ${domain}
+    Host: ${domain}
 
 # Format Vmess gRPC
 
@@ -368,8 +320,8 @@ echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━�
 echo -e "Link None => ${vmesslink2}"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
 echo -e "Link Grpc => ${vmesslink5}"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"   
-echo -e "Format OpenClash : https://${domain}:81/vmess-$user.txt" | tee -a /etc/user-create/user.log
+echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"       
+Format OpenClash : http://${domain}:81/vmess-$user.txt         
 echo -e "Expired => $exp"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"     
 echo -e ""      
