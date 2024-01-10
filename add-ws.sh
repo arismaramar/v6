@@ -38,7 +38,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/arismaramar/izin/main/ip > /root/tmp
+    curl -sS  https://raw.githubusercontent.com/arismaramar/izin/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -56,7 +56,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/arismaramar/izin/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS  https://raw.githubusercontent.com/arismaramar/izin/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -73,7 +73,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/arismaramar/izin/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS  https://raw.githubusercontent.com/arismaramar/izin/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -142,10 +142,8 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
+sed -i '/#vmessworry$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-
 asu=`cat<<EOF
       {
       "v": "2",
@@ -276,8 +274,49 @@ ${vmesslink3}
 
 END
 
-systemctl restart xray > /dev/null 2>&1
-service cron restart > /dev/null 2>&1
+CHATID="$CHATID"
+KEY="$KEY"
+TIME="$TIME"
+URL="$URL"
+TEXT="<code>☉————————————————————————☉</code>
+<code>🍀Xray/Vmess Account🍀</code>
+<code>☉————————————————————————☉</code>
+<code> "${z}${r} ${NC}${z}CITY          ${NC}: $CITY"
+<code> "${z}${r} ${NC}${z}ISP           ${NC}: $ISP"
+<code>☉————————————————————————☉</code>
+<code>Remarks   : ${user}
+Domain    : ${domain}
+Limit Quota : ${Quota} GB
+Port TLS  : 400-900
+Port NTLS : 80, 8080, 8081-9999
+id        : ${uuid}
+alterId   : 0
+Security  : auto
+network   : ws or grpc
+Path      : /Multi-Path
+Dynamic   : https://bugmu.com/path
+Name      : vmess-grpc</code>
+<code>☉————————————————————————☉</code>
+<code> VMESS WS TLS</code>
+<code>☉————————————————————————☉</code>
+<code>${vmesslink1}</code>
+<code>☉————————————————————————☉</code>
+<code>VMESS WS NO TLS</code>
+<code>☉————————————————————————☉</code>
+<code>${vmesslink2}</code>
+<code>☉————————————————————————☉</code>
+<code> VMESS gRPC</code>
+<code>☉————————————————————————☉</code>
+<code>${vmesslink3}</code>
+<code>☉————————————————————————☉</code>
+Format OpenClash : https://${domain}:81/vmess-$user.txt
+Berakhir Pada  : $expe
+<code>☉————————————————————————☉</code>
+"
+
+
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+clear
 clear
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
 echo -e "│                  VMESS ACCOUNT                  │" | lolcat
@@ -291,8 +330,8 @@ echo -e "Port ssl/tls : 443"
 echo -e "Port non tls : 80"                                        
 echo -e "Key          : $uuid"
 echo -e "Network      : ws, grpc"
-echo -e "Path         : /vmess"
-echo -e "Dynamic      : https://bugmu.com/path"           
+echo -e "Path         : /Multi-Path"
+echo -e "Dynamic      : https://bugmu.com/path"                    
 echo -e "serviceName  : vmess-grpc"               
 echo -e ""  
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"              
@@ -300,9 +339,9 @@ echo -e "Link Tls  => ${vmesslink1}"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                 
 echo -e "Link None => ${vmesslink2}"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
-echo -e "Link Grpc => ${vmesslink5}"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"       
-Format OpenClash : http://${domain}:81/vmess-$user.txt         
+echo -e "Link Grpc => ${vmesslink3}"
+echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"    
+Format OpenClash : https://${domain}:81/vmess-$user.txt            
 echo -e "Expired => $exp"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"     
 echo -e ""      
