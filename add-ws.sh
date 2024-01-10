@@ -368,7 +368,8 @@ echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━�
 echo -e "Link None => ${vmesslink2}"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
 echo -e "Link Grpc => ${vmesslink5}"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
+echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"   
+echo -e "Format OpenClash : https://${domain}:81/vmess-$user.txt" | tee -a /etc/user-create/user.log
 echo -e "Expired => $exp"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"     
 echo -e ""      
